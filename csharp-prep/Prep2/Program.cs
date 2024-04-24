@@ -1,10 +1,10 @@
 using System;
+using System.Linq.Expressions;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep2 World!");
         Console.Write("Tell me your score ");
         string valueFromUser=Console.ReadLine ();
         int percentage = int.Parse(valueFromUser);
@@ -21,11 +21,11 @@ class Program
         {
             letter = "C";
         }
-        else if (percentage >=70)
+        else if (percentage >=60)
         {
             letter = "D";
         }
-        else if (percentage >=60)
+        else if (percentage >=50)
         {
             letter = "E";
         }
@@ -33,7 +33,31 @@ class Program
         {
             letter="F";
         }
-        Console.WriteLine($"Your score is {letter} .");
+
+        int lastDigit=percentage % 10;
+        string signForGrade = "";
+
+        if (lastDigit>=7)
+        {
+            if (letter=="A" || letter=="F")
+            {
+                signForGrade="";
+            }
+            else
+            {
+                signForGrade="+";
+            }
+        if (lastDigit<=3)
+            if (letter=="F")
+            {
+                signForGrade="";
+            }
+            else
+            {
+                signForGrade="-";
+            }
+        }
+        Console.WriteLine($"Your score is {letter}{signForGrade}.");
 
         if (percentage>=70)
         {
