@@ -30,7 +30,5 @@ class Program
         {
             Console.WriteLine("equal");
         }
-    }
-
-        
+    }      
 }
