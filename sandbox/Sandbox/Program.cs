@@ -12,6 +12,8 @@ class Program
         // Console.WriteLine("what's your favorite color? ");
         // string color = Console.ReadLine();
         // Console.WriteLine($"your color is {color}");
+
+        // Info from the user
         Console.Write("Enter the number: ");
         string valueFromUser = Console.ReadLine ();
 
