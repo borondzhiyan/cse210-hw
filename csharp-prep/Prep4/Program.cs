@@ -29,7 +29,6 @@ class Program
                 sum +=i;  
             }
             Console.WriteLine($"The total sum is {sum}.");
-
             int count = (list.Count);
             float average=sum/count;
             Console.WriteLine($"The average is: {average}");
@@ -45,6 +44,9 @@ class Program
         }
         else
             Console.WriteLine($"The list is empty");
+
+
+
 
     }
         
