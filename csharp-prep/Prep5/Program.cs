@@ -8,7 +8,7 @@ class Program
         DisplayWelcome();
         string userName= PromptUserName();
         int numberInt=PromptUserNumber();
-        Console.WriteLine($"{userName}, the square of your number is : {numberInt*numberInt}");
+        Outcome(userName,numberInt);
         
     }
     static void DisplayWelcome()
@@ -28,6 +28,10 @@ class Program
         string userNumber=Console.ReadLine();
         int numberInt = int.Parse(userNumber);
         return numberInt;
+    }
+    static void Outcome (string userName,int numberInt)
+    {
+      Console.WriteLine($"{userName}, the square of your number is : {numberInt*numberInt}");  
     }
 
 }
