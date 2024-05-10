@@ -27,11 +27,12 @@ class Program
                 Console.WriteLine($"{prompt}");
                 Console.Write("> ");
                 string entryText = Console.ReadLine();
-                Entry newEntry = new Entry{
-                    _date = date,
-                    _promptText=prompt,
-                    _entryText = entryText,
-                };
+                Entry newEntry = new Entry(date, prompt,entryText); 
+                // {
+                    // _date = date,
+                    // _promptText=prompt,
+                    // _entryText = entryText,
+                // };
                 journal.AddEntry(newEntry);
                 break;
 
