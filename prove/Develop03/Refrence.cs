@@ -1,5 +1,5 @@
 using System;
-
+// ссылка на священное писание 
 public class Reference{
     string _book;
     int _chapter;
@@ -19,7 +19,11 @@ public class Reference{
         _endVerse= endVerse;
     }
     public string GetDisplayText(){
-        return null;
+        string endverse= ""; // если сделать endverse = null, то при выводе на экран будет "null", а в данном случае будет ""
+        if (_endVerse > 0){ // 0 - будет в конце ничего
+            endverse = "-"+_endVerse;// прибавится в конце 
+        }
+        return ($"{_book} {_chapter}:{_verse}{endverse}");
     }
     
 }
