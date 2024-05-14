@@ -61,7 +61,7 @@ class Program
         // Console.WriteLine(r1.GetDisplayText());
         // Console.WriteLine(r2.GetDisplayText());
         // r1.GetDisplayText();
-        s1.GetDisplayText();
+      
 
 
 
