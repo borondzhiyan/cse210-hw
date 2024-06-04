@@ -2,13 +2,19 @@ using System;
 
 public class Customer {
     private string _name;
-    public List<Customer> _customers;
-        public Customer(){
-            _customers=new List<Customer>{};
-        }
+    private Address _address;
+    public Customer(string name, Address address){
+    _name=name;
+    _address=address;
+    }
+    public bool isFromUsa(){
+        return _address.isUsa();
+    }
 
-
-public void AddCustomer(Customer newCustomer){
-    _customers.Add(newCustomer);
-}
+    public string GetCustomerName(){
+        return _name;
+    }
+    public string GetCustomerAddress(){
+        return _address.GetAddress();
+    }
 }
