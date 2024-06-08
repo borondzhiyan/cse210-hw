@@ -3,7 +3,7 @@ using System;
 public class Running : Activity {
     private float _distance;
 
-    public Running(DateOnly date, float length, float distance) : base(date, length)
+    public Running(DateOnly date, int length, float distance) : base(date, length)
     {
         _distance=distance;
     }
