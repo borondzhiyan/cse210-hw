@@ -10,7 +10,7 @@ public class Cycling : Activity
 
     public override float GetDistance()//методы, которые бли в абстактном классе переопределены здесь
     {
-        return _speed*base.GetLength();
+        return _speed*(base.GetLength()/60);
     }
 
     public override float GetPace()
@@ -21,5 +21,10 @@ public class Cycling : Activity
     public override float GetSpeed()
     {
         return _speed;
+    }
+
+    protected override string GetTypeActivity()
+    {
+        return "Cyicling";
     }
 }

@@ -22,4 +22,9 @@ public class Running : Activity {
     {
         return _distance/base.GetLength()*60;
     }
+
+    protected override string GetTypeActivity()
+    {
+        return "Running";
+    }
 }
